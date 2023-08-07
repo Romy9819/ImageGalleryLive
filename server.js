@@ -10,7 +10,8 @@ app.use(express.json());
 
 mongoose.connect('mongodb+srv://romymathew732:Romy12345@cluster0.i9rqt1e.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    bufferTimeoutMS: 30000,
 }).then(() => {
     // console.log('MongoDB connected');
   })
