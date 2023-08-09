@@ -103,24 +103,6 @@ router.post('/images/:id/comment', async (req, res) => {
     }
 });
 
-// router.get("/share/:imageId", async (req, res) => {
-//     try {
-//       const imageId = req.params.imageId;
-
-//       const image = await Image.findById(imageId);
-//       if (!image) {
-//         return res.status(404).json({ message: "Image not found" });
-//       }
-  
-//       const shareableLink = `http://yourdomain.com/share/${imageId}`;
-  
-//       res.set("Location", shareableLink);
-//         res.status(301).end();
-//     } catch (error) {
-//       res.status(500).json({ message: "Internal Server Error" });
-//     }
-//   });
-
 router.get('/download/:imageName', (req, res) => {
     const imageName = req.params.imageName;
     const imagePath = path.join(__dirname, 'uploads', imageName);
